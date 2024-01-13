@@ -1,0 +1,10 @@
+<!-- TuneTracker/templates/song_detail.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="song-detail">
+        <h2 class="song-title">{{ song.title }}</h2>
+        <p class="artist-name">{{ song.artist.name }}</p>
+    </div>
+{% endblock %}

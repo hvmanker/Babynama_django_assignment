@@ -1,0 +1,16 @@
+<!-- TuneTracker/templates/song_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="page-title">Song List</h2>
+    <ul class="song-list">
+        {% for song in songs %}
+            <li class="song-list-item">
+                <a href="{% url 'song_detail' pk=song.pk %}">
+                    <strong>{{ song.title }}</strong> - {{ song.artist.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

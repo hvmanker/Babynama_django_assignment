@@ -1,0 +1,15 @@
+<!-- TuneTracker/templates/artist_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="page-title">Artist List</h2>
+    <ul class="artist-list">
+        {% for entry in artists %}
+            <li class="artist-list-item">
+                <h2>{{ entry.artist.name }}</h2>
+                <p>{{ entry.song_count }} {% if entry.song_count == 1 %}song{% else %}songs{% endif %}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

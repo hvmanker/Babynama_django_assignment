@@ -1,0 +1,14 @@
+<!-- TuneTracker/templates/add_song.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="add-song-form">
+        <h2 class="page-title">Add Song</h2>
+        <form method="post" action="{% url 'add_song' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Add Song</button>
+        </form>
+    </div>
+{% endblock %}
