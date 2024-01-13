@@ -27,7 +27,7 @@ source venv/bin/activate
 
 ### Install dependencies
 
-pip install -r requirements.txt
+pip install django
 
 ### Run migrations
 python manage.py migrate
